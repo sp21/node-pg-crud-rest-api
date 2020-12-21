@@ -3,9 +3,9 @@ module.exports = {
     "appEndpoint": "http://localhost:3600",
     "apiEndpoint": "http://localhost:3600",
     "environment": "dev",
-    "db_name":"nodeapp",
+    "db_name":"jobrotationdb",
     "db_username":"postgres",
-    "db_password":"root",
+    "db_password":"1234",
     "db_host":"localhost",
     "db_dialect":"postgres"
 };

@@ -1,10 +1,11 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const env = require('./configs/env');
-const business = require('./libs/business/business.route');
+const carrer = require('./libs/business/carrer.route');
 
 const app = express();
 app.use(function (req, res, next) {
+    //for handling cors
     res.header('Access-Control-Allow-Origin', '*');
     res.header('Access-Control-Allow-Credentials', 'true');
     res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
@@ -17,8 +18,7 @@ app.use(function (req, res, next) {
     }
 }); 
 app.use(bodyParser.json()); 
-business.businessRoutes(app);
-app.use('/uploads/business-images', express.static('uploads/business-images'));
+carrer.carrerRoutes(app);
 
 
 app.listen(env.port, function () {
