@@ -5,7 +5,7 @@ module.exports = (sequelize, DataTypes) => {
             primaryKey: true
         },
         employee_number: {
-            type: DataTypes.TEXT,
+            type: DataTypes.INTEGER,
             primaryKey: true
         },
         name:{
